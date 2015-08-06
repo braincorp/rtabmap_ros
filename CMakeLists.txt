@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rtabmap_ros)
 
+
+set(RTABMap_INCLUDE_DIRS /usr/local/include/rtabmap-0.9/)
+set(RTABMap_LIBRARIES /usr/local/lib/librtabmap_core.so;/usr/local/lib/librtabmap_gui.so;/usr/local/lib/librtabmap_utilite.so)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -17,7 +21,7 @@ find_package(octomap_ros)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-find_package(RTABMap 0.9.0 REQUIRED)
+#find_package(RTABMap 0.9.0 REQUIRED)
 
 #Qt stuff
 FIND_PACKAGE(Qt4 COMPONENTS QtCore QtGui REQUIRED)
