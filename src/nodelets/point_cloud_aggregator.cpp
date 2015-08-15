@@ -1,4 +1,3 @@
-
 #include <ros/ros.h>
 #include <pluginlib/class_list_macros.h>
 #include <nodelet/nodelet.h>
@@ -61,7 +60,7 @@ private:
 		ros::NodeHandle & nh = getNodeHandle();
 		ros::NodeHandle & pnh = getPrivateNodeHandle();
 
-		int queueSize = 5;
+		int queueSize = 15;
 		pnh.param("queue_size", queueSize, queueSize);
 
 		cloudSub_1_.subscribe(nh, "cloud1", 1);
